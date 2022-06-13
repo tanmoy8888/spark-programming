@@ -6,7 +6,9 @@ import org.apache.spark.Partitioner
  * @author Tanmoy Mukherjee
  */
 class WordPartitionar(numberOfPartitions: Int) extends  Partitioner{
+
   override def numPartitions: Int = numberOfPartitions
+
   override def getPartition(key: Any): Int = {
     if(key.toString.headOption.mkString.equalsIgnoreCase("A")) return 0
     else if(key.toString.headOption.mkString.equalsIgnoreCase("E")) return 1

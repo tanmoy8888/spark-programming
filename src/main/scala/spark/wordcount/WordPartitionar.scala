@@ -1,4 +1,4 @@
-package org.pragramming.spark.wordcount
+package spark.wordcount
 
 import org.apache.spark.Partitioner
 
